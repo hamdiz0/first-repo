@@ -1,3 +1,4 @@
+#local
 chupapi world
 world goob 
 goob life
