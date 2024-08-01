@@ -1,4 +1,4 @@
-#local
+#Local
 chupapi world
 world goob 
 goob life
@@ -11,4 +11,4 @@ this line is added using https and pat
 this line is added using ssh 
 this line is added using ssh with a linus machine
 this line is added in the remote
-#remote
+#Remote
