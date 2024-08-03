@@ -38,3 +38,7 @@ chupa added from chupa
 2-another stash line
 
 a pull request line
+
+pr take 2
+
+another line with chupa in it
