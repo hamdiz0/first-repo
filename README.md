@@ -51,24 +51,24 @@
 	- git checkout "hash" "file" ("detatched head state" if file is not specified type git switch - or git ckeckout main to undo changes)
 
 # `ignore files` :
-	- specifie dirs/files/patterns in ".gitignore" to ignore it
-	- ".gitignore" file must be committed
+	* specifie dirs/files/patterns in ".gitignore" to ignore it
+	* ".gitignore" file must be committed
 
 # `track empty dirs` :
-	- add a ".gitkeep" inside an empty dir to keep track of it
-	- ".gitkeep" file is just a convention not a special file
+	* add a ".gitkeep" inside an empty dir to keep track of it
+	* ".gitkeep" file is just a convention not a special file
 
 # `alaises` :
 	- git config --global alias."alias" "command"
 
-#update or change commits :
+# `update or change a commit` :
 	- git commit --amend -m "message" (change last commit message)
 		
 					[`USING GIT REMOTLY`]	
 	 
 # `local/remote communication` :
-	- its better to initialize the repo on the remote web service first
-	- clone clones a remote web repo on a local machine
+	* its better to initialize the repo on the remote web service first
+	* clone clones a remote web repo on a local machine
 
 # `set up|remove remote repo` :
 	- git remote -v (show current remote connections fetch/push)
@@ -77,11 +77,11 @@
 	- git rename "old remote name" "new name"	
 
 # `ssh` :
-	- github => account settings => ssh & gpg keys
 	- ssh-keygen (generates an ssh key "in bash")
-	- copy the public key under ~/.ssh to key tab under ssh & gpg section
-	- set up remote connection using ssh url (git remote add "name" "url")
-	- make sure to remove the current remote connection "https" (git remote rm "name")
+	* github => account settings => ssh & gpg keys
+	* copy the public key under "~/.ssh(linux)"|"C:/users/user/.ssh(win)" to key tab under ssh & gpg section
+	* set up remote connection using ssh url (git remote add "name" "url")
+	* make sure to remove the current remote connection "https" (git remote rm "name")
 
 # `push` :
 	- push : local => remote
@@ -92,8 +92,8 @@
 	- git pull "remote(where to pull from)" "local(to what bransh)"	
 
 # `conflicts` :
-	- if remote and local both committed diffrent changes
-	- pushing changes (from local) requiers pulling from remote first 
+	* if remote and local both committed diffrent changes
+	* pushing changes (from local) requiers pulling from remote first 
 	- git merge --abort (returns to the state before pulling from remote)
 	
 
@@ -119,38 +119,36 @@
 	- git stash clear (clear stashes)	
 
 # `merging` : 
-	- merge a branch changes to the main branch or another branch
+	* merge a branch changes to the main branch or another branch
 	- in the a branch "main" : git merge "the branch with the changes"
-	- O => O *\=> O => O  /*=>O  (O:main branch)
+	- O => O *\=> O => O  /*=> O  (O:main branch)
 	           \=>O1=> O1/
 		
 # `rebase` :
-	- rewrite the history of a commit 
-	- git rebase "branch" incorporate changes from "branch(main)" into current branch(feature)
+	- git rebase "branch" incorporate changes from "branch(main)" into current "branch(feature)"
 	- git rebase --abort (abort rebase)
 	- git rebase --continue : icorporate desired changes (git add .) than run this command in case of conflicts
 	- O => O *\=> O1=> O1   =\   O => O => O1=> O1 *\  
 	           \=>O2=> O2   =/		       \=> O2=> O2
-	- git status helps working with rebase
+	* rewrite the history of a commit 
+	* git status helps working with rebase
 	* merge into main branch after incorporating changes and fixing conflicts in the feature branch
-	
+	* rebase is used when the "main branch" commited changes that are not avaible for a "feature branch" to rewrite its history and fix conflicts to make it ready for merging whith main	
+
 # `squaching commits` :
 	- git rebase -i "hash(+"^":one hash before)"|HEAD~"number"
-	- set "s" in "pick" before the commit to squach it with the previous commit
+	* set "s" in "pick" before the commit to squach it with the previous commit
 	
 # `pull requests & merging branches in GitHub ui` :
-	- under code tab select desiered branch (drop down menu) than click on "contribute" to create a pull request
-	- its possible to update the branch in the remote locally (git push "remote" "branch")
+	* under code tab select desiered branch (drop down menu) than click on "contribute" to create a pull request
+	* its possible to update the branch in the remote locally (git push "remote" "branch")
 
 # `update the log` :
 	- git fetch (update git log without changing files)
 	- git fetch --prune (update and remove deleted branches in the git log)
 
-	 
-
-
-
-
+# `control HEAD pointer position` :
+	- git reset --hard "hash"|"branch(origin/main)" (move HEAD pointer to a specific commit)	 
 
 
 
