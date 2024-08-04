@@ -146,13 +146,8 @@
 	- git fetch (update git log without changing files)
 	- git fetch --prune (update and remove deleted branches in the git log)
 
- #chupapi
-
-	 
-
-
-
-
+# `control HEAD pointer position` :
+	- git reset --hard "hash"|"branch(origin/main)" (move HEAD pointer to a specific commit)	 
 
 
 
