@@ -1,44 +1,176 @@
-#Local git
-chupapi world
-world goob 
-goob life
-wife bad
-cry goob
-kill ur self
-rahma dob
-sheesh man i need some help
-this line is added using https and pat
-this line is added using ssh 
-this line is added using ssh with a linus machine
-this line is added in the remote
-iriz not what iriz
+					[USING GIT ON A LOCAL MACHINE]
 
-#Remote git
-remote stuff u know
+#show version :
+	git --version
 
-#branches
-branch stuff u know
+#set up name and email / repo :
+	git config --global user.name "name"
+	git config --global user.email "email"
 
-iriz waririz
+#set up a text default editor :
+	git config --global core.editor "nano -w" (nano)
+	git config --global core.editor "code --wait" (vscode)
 
-chupa added by main
+#initialize current folder as a git repo  :
+	git init
 
-chupa added from chupa
+#check config :
+	git config --list
+
+#clone a repo :
+	git clone "url"
+
+#show repo status :
+	git status
+
+#add changes to the staging/tracking area :
+	git add "file"
+	git add . (add evrything in the current path)
+
+#restore and discard changes :
+	git restore "file"	
+
+#commit changes :
+	git commit (opens text editor to write a msg)
+	git commit -m "message" (write msg directly)
+	git commit -am "message" (add all changes in the current dir and commit)
+
+#commit history :
+	git log ("HEAD => main" present on the current last commit)
+	git log --oneline
+
+#show difference or changes to what git already knows:
+	git diff (compare current uncommitted state with last known state)
+	git diff --staged (see differences after adding changes to the staging area)
+	git diff HEAD~2 (compare HEAD "current state" with relative commit number ago)
+	git diff "hash" (see difference between current state and previous commits using hash identifier)	
+
+#restore history or previous state :
+	git restore "file" (restore current state to the last known state)
+	git restore --source "hash"|HEAD~2 "file" (restre to a particular state)
+	git checkout "hash" "file" ("detatched head state" if file is not specified type git switch - or git ckeckout main to undo changes)
+
+#ignore files :
+	specifie dirs/files/patterns in .gitignore to ignore it
+	.gitignore file must be committed
+
+#track empty dirs :
+	add a .gitkeep inside an empty dir to keep track of it
+	.gitkeep file is just a convention not a special file
+
+#alaises :
+	git config --global alias."alias" "command"
+
+#update or change commits :
+	git commit --amend -m "message" (change last commit message)
+		
+
+	
+					[USING GIT REMOTLY]	
+	 
+#local/remote communication :
+	its better to initialize the repo on the remote web service first
+	clone clones a remote web repo on a local machine
+
+#set up|remove remote repo :
+	git remote -v (show current remote connections fetch/push)
+	git remote add "remote name(origin)" "repo url from web service"
+	git remote rm "remote name(origin)" (removes remote connection) 
+	git rename "old remote name" "new name"	
+
+#ssh :
+	github => account settings => ssh & gpg keys
+	ssh-keygen (generates an ssh key "in bash")
+	copy the public key under ~/.ssh to key tab under ssh & gpg section
+	set up remote connection using ssh url (git remote add "name" "url")
+	make sure to remove the current remote connection "https" (git remote rm "name")
+
+#push :
+	push : local => remote
+	git push "remote(where to push to)" "local(from what bransh)"
+
+#pull :
+	pull : reote => local	
+	git pull "remote(where to pull from)" "local(to what bransh)"	
+
+#conflicts :
+	if remote and local both committed diffrent changes
+	pushing changes (from local) requiers pulling from remote first 
+	git merge --abort (returns to the state before pulling from remote)
+	
+
+#set up personal access token PAT :
+	git web service (github) => account settings => developer settings => PAT
+	printf "host=github.com\nprotocol=https\n" | git credential fill (chow pat conf)
+	printf "host=github.com\nprotocol=https\n" | git credential reject (remove pat conf)
+
+					[BRANCHES]
+
+#its better to work in feature branches than merge changes into the main branchs
+
+#create and switch between branches :
+	git branch "branch" (create a new branch)
+	git branch -a (list all branchs)
+	git branch -d "branch" (delete a branch "-D :force delete")
+	git switch "branch" (switch to a branch) ,git ckeckout "branch name" 
+	git switch -c "branch" (create and switch to a branch) ,git ckeckout -b "branch name"
+	*moving between branches requiers commiting or stashing changes (more than one commit)
+	git stash (teporarly save changes or a commit allowing branch switching)
+	git stash list (show current stashed commits {"index"})
+	git stash apply "index" (apply a stashed commit)
+	git stash clear (clear stashes)	
+
+#merging : 
+	merge a branch changes to the main branch or another branch
+	in the a branch "main" : git merge "the branch with the changes"
+	O => O *\=> O => O  /*=>O  (O:main branch)
+	         \=>O1=> O1/
+		
+#rebase :
+	rewrite the history of a commit 
+	git rebase "branch" incorporate changes from "branch(main)" into current branch(feature)
+	git rebase --abort (abort rebase)
+	git rebase --continue : icorporate desired changes (git add .) than run this command in case of conflicts
+	O => O *\=> O1=> O1   =\   O => O => O1=> O1 *\  
+	         \=>O2=> O2   =/		       \=> O2=> O2
+	git status helps working with rebase
+	merge into main branch after incorporating changes and fixing conflicts in the feature branch
+	
+#squaching commits :
+	git rebase -i "hash(+"^":one hash before)"|HEAD~"number"
+	set "s" in "pick" before the commit to squach it with the previous commit
+	
+#pull requests & merging branches in GitHub ui :
+	under code tab select desiered branch (drop down menu) than click on "contribute" to create a pull request
+	its possible to update the branch in the remote locally (git push "remote" "branch")
+	
+	 
 
 
-1-main commit num 1
-2-main commit num 2 
-3-main commit num 3
 
-1-first commit
-2-second commit
-3-third commit
 
-1-stash line
-2-another stash line
 
-a pull request line
 
-pr take 2
 
-another line with chupa in it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
