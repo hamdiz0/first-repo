@@ -87,7 +87,7 @@
 	- push : local => remote
 	- git push "remote(where to push to)" "local(from what bransh)"
 	- git push -f(force) "remote(where to push to)" "local(from what bransh)" 
-
+	- git push --force-with-lease "remote(where to push to)" "local(from what bransh)" (more mindfull of collaborators)
 
 # `pull` :
 	- pull : reote => local	
