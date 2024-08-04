@@ -142,7 +142,7 @@
 	- under code tab select desiered branch (drop down menu) than click on "contribute" to create a pull request
 	- its possible to update the branch in the remote locally (git push "remote" "branch")
 
-# `update the git log` :
+# `update the log` :
 	- git fetch (update git log without changing files)
 	- git fetch --prune (update and remove deleted branches in the git log)
 		
