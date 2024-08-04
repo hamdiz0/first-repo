@@ -145,7 +145,7 @@
 # `update the git log` :
 	- git fetch (update git log without changing files)
 	- git fetch --prune (update and remove deleted branches in the git log)
-		
+	- chupa added
 	 
 
 
