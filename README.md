@@ -86,6 +86,8 @@
 # `push` :
 	- push : local => remote
 	- git push "remote(where to push to)" "local(from what bransh)"
+	- git push -f(force) "remote(where to push to)" "local(from what bransh)" 
+
 
 # `pull` :
 	- pull : reote => local	
@@ -129,7 +131,7 @@
 	- git rebase --abort (abort rebase)
 	- git rebase --continue : icorporate desired changes (git add .) than run this command in case of conflicts
 	- O => O *\=> O1=> O1   =\   O => O => O1=> O1 *\  
-	           \=>O2=> O2   =/		       \=> O2=> O2
+	           \=>O2=> O2   =/		         \=> O2=> O2
 	* rewrite the history of a commit 
 	* git status helps working with rebase
 	* merge into main branch after incorporating changes and fixing conflicts in the feature branch
@@ -162,8 +164,7 @@
 
 
 
-
-
+ 
 
 
 
