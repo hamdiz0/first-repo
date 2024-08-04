@@ -1,9 +1,9 @@
 					[USING GIT ON A LOCAL MACHINE]
 
-#show version :
+# `show version` :
 	- git --version
 
-#set up name and email / repo :
+# `set up name and email / repo` :
 	- git config --global user.name "name"
 	- git config --global user.email "email"
 
