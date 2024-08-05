@@ -152,8 +152,10 @@
 # `control HEAD pointer position` :
         - git reset --hard "hash"|"branch(origin/main)" (move HEAD pointer to a specific commit)
 
+                                        [`GIT WORKFLOWS WORKING WITH COLLABORATORS`]
 
-
+# `adding collaborators ` :
+		* repo settings => cloborators => add people
 
 
 
