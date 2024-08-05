@@ -155,8 +155,8 @@
                                         [`GIT WORKFLOWS WORKING WITH COLLABORATORS`]
 
 # `adding collaborators ` :
-		* repo settings => cloborators => add people
-
+	* repo settings => cloborators => add people
+	
 
 
 
