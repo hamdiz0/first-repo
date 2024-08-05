@@ -156,6 +156,8 @@
 
 # `adding collaborators ` :
 	* repo settings => cloborators => add people
+
+# `adding branch protection rules` :
 	
 
 
