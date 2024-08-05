@@ -158,7 +158,6 @@
 	* repo settings => cloborators => add people
 
 # `adding branch protection rules` :
-	* rule number 1	
 
 
 
