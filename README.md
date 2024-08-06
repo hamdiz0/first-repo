@@ -159,10 +159,11 @@
 	* repo settings => cloborators => add people
 	* resync history or pull the latest changes before creating a branch 
 	* feature branches (pull requests) won't show conflicts until one of them is merged first
-
+	
 # `adding branch protection rules` :
 	* repo settings => branches => add rule (specifie branch name and select desired rules)
-	
+	* add rules to make it that not anybody can push their changes to a certain branch
+	* add pull requests rules so that pull requests require reviewing (certain number of reviews) before merging
 
 
 
