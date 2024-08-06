@@ -109,6 +109,7 @@
 #its better to work in feature branches than merge changes into the main branchs
 
 # `create and switch between branches` :
+	* it's better to pull from main (remote) before creating a branch
         - git branch "branch" (create a new branch)
         - git branch -a (list all branchs)
         - git branch -d "branch" (delete a branch "-D :force delete")
@@ -156,11 +157,12 @@
 
 # `adding collaborators ` :
 	* repo settings => cloborators => add people
+	* resync history or pull the latest changes before creating a branch 
+	* feature branches (pull requests) won't show conflicts until one of them is merged first
 
 # `adding branch protection rules` :
-
-
-
+	* repo settings => branches => add rule (specifie branch name and select desired rules)
+	
 
 
 
