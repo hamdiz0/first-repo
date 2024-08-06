@@ -163,8 +163,7 @@
 # `adding branch protection rules` :
 	* repo settings => branches => add rule (specifie branch name and select desired rules)
 	* add rules to make it that not anybody can push their changes to a certain branch (main)
-	* add pull requests rules so that pull requests require reviewing (certain number of reviews) before merging
-	
+	* add pull requests rules so that pull requests require reviewing (certain number of reviews) and approuval before merging	
 
 
 
