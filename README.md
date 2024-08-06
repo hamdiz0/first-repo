@@ -67,7 +67,7 @@
                                         [`USING GIT REMOTLY`]
 
 # `local/remote communication` :
-        * its better to initialize the repo on the remote web service first
+        * it's better to initialize the repo on the remote web service first
         * clone clones a remote web repo on a local machine
 
 # `set up|remove remote repo` :
@@ -106,7 +106,7 @@
 
                                         [`BRANCHES`]
 
-#its better to work in feature branches than merge changes into the main branchs
+#it's better to work in feature branches than merge changes into the main branchs
 
 # `create and switch between branches` :
 	* it's better to pull from main (remote) before creating a branch
@@ -136,7 +136,7 @@
         * rewrite the history of a commit
         * git status helps working with rebase
         * merge into main branch after incorporating changes and fixing conflicts in the feature branch
-        * rebase is used when the "main branch" commited changes that are not avaible for a "feature branch" to rewrite its history and fix conflicts to make it ready for merging whith main
+        * rebase is used when the "main branch" commited changes that are not avaible for a "feature branch" to rewrite it's history and fix conflicts to make it ready for merging whith main
 
 # `squaching commits` :
         - git rebase -i "hash(+"^":one hash before)"|HEAD~"number"
@@ -144,7 +144,7 @@
 
 # `pull requests & merging branches in GitHub ui` :
         * under code tab select desiered branch (drop down menu) than click on "contribute" to create a pull request
-        * its possible to update the branch in the remote locally (git push "remote" "branch")
+        * it's possible to update the branch in the remote locally (git push "remote" "branch")
 
 # `update the log` :
         - git fetch (update git log without changing files)
