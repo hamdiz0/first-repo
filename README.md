@@ -168,7 +168,7 @@
 
 # `git flow` :
 	* setting seperate branches for production(main) and development(dev) wich can contain multiple sub-branches(feature)
-	* sub-branches commit their changes against the "dev" branch (merged against "dev") 
+	* sub-branches commit their changes against the "dev" branch (merged against dev) 
 	* when these changes are tested and approuved their are ready to merge with "main"
 	- (main) O => O => O *\ ===============================================> /*=> O	
 			       \ (dev) O => O => O *\ =================> /*=> O / 		
