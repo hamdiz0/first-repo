@@ -132,7 +132,7 @@
         - git rebase --abort (abort rebase)
         - git rebase --continue : icorporate desired changes (git add .) than run this command in case of conflicts
         - O => O *\=> O1=> O1   =\   O => O => O1=> O1 *\
-                   \=>O2=> O2   =/                       \=> O2=> O2
+                   \=>O2=> O2   =/                       \*=> O2=> O2
         * rewrite the history of a commit
         * git status helps working with rebase
         * merge into main branch after incorporating changes and fixing conflicts in the feature branch
@@ -166,7 +166,13 @@
 	* add pull requests rules so that pull requests require reviewing (certain number of reviews) and approuval before merging	
 	* set bypass exception rules to get certain preveliges as the owner
 
-
+# `git flow` :
+	* setting seperate branches for production(main) and development(dev) wich can contain multiple sub-branches(feature)
+	* sub-branches commit their changes against the "dev" branch (merged against "dev") 
+	* when these changes are tested and approuved their are ready to merge with "main"
+	- (main) O => O => O *\ ===============================================> /*=> O	
+			       \ (dev) O => O => O *\ =================> /*=> O / 		
+			      			     \ (feature) O => O /	
 
 
 
