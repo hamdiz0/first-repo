@@ -149,6 +149,7 @@
 # `update the log` :
         - git fetch (update git log without changing files)
         - git fetch --prune (update and remove deleted branches in the git log)
+	- git fetch --prune --all (update git log from all avaible remotes)
 
 # `control HEAD pointer position` :
         - git reset --hard "hash"|"branch(origin/main)" (move HEAD pointer to a specific commit)
@@ -174,9 +175,14 @@
 			       \ (dev) O => O => O *\ =================> /*=> O / 		
 			      			     \ (feature) O => O /	
 
-
-
-
+# `forking` :
+	* forking workflow is commonly used in open source projects
+	* copy the original remote repo into youre account
+	* the remote copy is called origin
+	* the original copy is called "upstream"
+	* it's better to follow the branching workflow used by the original copy (upstream) 
+	- git remote add "upstream" "url" (adding the original copy remote (upstream) to stay up to date)
+	
 
 
 
